@@ -3,8 +3,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-input-button-unit',
   template: `
-    <input #inputElementRef [value]="title" (keyup.enter)="submitValue(inputElementRef.value)">
-    <button (click)="submitValue(inputElementRef.value)">Save</button>
+    <input class="todo-input" #inputElementRef [value]="title" (keyup.enter)="submitValue(inputElementRef.value)">
+    <button class="btn" type="button" (click)="submitValue(inputElementRef.value)">Save</button>
   `,
   styleUrls: ['./input-button-unit.component.css']
 })
