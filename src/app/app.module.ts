@@ -6,6 +6,7 @@ import { InputButtonUnitComponent } from './input-button-unit/input-button-unit.
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ListManagerComponent } from './list-manager/list-manager.component';
 import { TodoListService } from './services/todo-list.service';
+import { StorageService } from './services/storage.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { TodoListService } from './services/todo-list.service';
     ListManagerComponent
   ],
   imports: [BrowserModule],
-  providers: [TodoListService],
+  providers: [TodoListService, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
