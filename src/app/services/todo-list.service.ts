@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TodoItem } from '../interfaces/todo-item';
+import { TodoItem, Changes } from '../interfaces/todo-item';
 import { StorageService } from './storage.service';
 
 const todoListStorageKey = 'Todo_List';
@@ -34,7 +34,7 @@ export class TodoListService {
     this.saveList();
   }
 
-  updateItem(item: TodoItem, changes: any): void {
+  updateItem(item: TodoItem, changes: Changes): void {
     const index = this.todoList.indexOf(item);
     this.todoList[index] = { ...item, ...changes };
     this.saveList();

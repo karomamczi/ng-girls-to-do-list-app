@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoItem } from '../interfaces/todo-item';
+import { TodoItem, TodoItemWithChanges } from '../interfaces/todo-item';
 import { TodoListService } from '../services/todo-list.service';
 
 @Component({
@@ -34,7 +34,7 @@ export class ListManagerComponent implements OnInit {
     this.todoListService.deleteItem(item);
   }
 
-  updateItem(itemWithChanges: any): void {
+  updateItem(itemWithChanges: TodoItemWithChanges): void {
     this.todoListService.updateItem(
       itemWithChanges.item,
       itemWithChanges.changes
