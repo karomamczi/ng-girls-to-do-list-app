@@ -10,7 +10,7 @@ import { TodoListService } from '../services/todo-list.service';
 
     <ul>
       <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]="todoItem" (remove)="removeItem($event)"></app-todo-item>
+        <app-todo-item [item]="todoItem" (remove)="removeItem($event)" (update)="updateItem($event)"></app-todo-item>
       </li>
     </ul>
   </div>
@@ -30,7 +30,14 @@ export class ListManagerComponent implements OnInit {
     this.todoListService.addItem({ title });
   }
 
-  removeItem(item): void {
+  removeItem(item: TodoItem): void {
     this.todoListService.deleteItem(item);
+  }
+
+  updateItem(itemWithChanges: any): void {
+    this.todoListService.updateItem(
+      itemWithChanges.item,
+      itemWithChanges.changes
+    );
   }
 }
