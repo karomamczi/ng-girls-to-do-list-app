@@ -12,7 +12,7 @@ li {
   vertical-align: baseline;
 }
 
-​body {
+body {
   background: #f1f1f1;
   font-size: 16px;
   line-height: 22px;
@@ -20,7 +20,7 @@ li {
   font-family: 'Lucida Grande', Verdana, sans-serif;
 }
 
-​ol,
+ol,
 ul {
   list-style: none;
 }
@@ -40,6 +40,14 @@ ul {
 
 .btn:hover {
   background: lightslategrey;
+}
+
+.btn-red {
+  background: red;
+}
+
+.btn-red:hover {
+  background: darkred;
 }
 
 .app-title {
