@@ -4,17 +4,7 @@ import { TodoListService } from '../services/todo-list.service';
 
 @Component({
   selector: 'app-list-manager',
-  template: `
-  <div class="todo-app">
-    <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
-
-    <ul>
-      <li *ngFor="let todoItem of todoList">
-        <app-todo-item [item]="todoItem" (remove)="removeItem($event)" (update)="updateItem($event)"></app-todo-item>
-      </li>
-    </ul>
-  </div>
-  `,
+  templateUrl: './list-manager.component.html',
   styleUrls: ['./list-manager.component.css']
 })
 export class ListManagerComponent implements OnInit {
